@@ -4,101 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Component Library</title>
-    <!-- CSS way 1: Style Tag
-        <style>
-        body{
-            color:red;
-        } 
-    </style>  -->
     <!--Third way of doing CSS:external link-->
     <link href = "styles.css" rel="stylesheet"/>
 </head>
 <body>
-    <h1 id="lib-header">Ayush's component library.</h1>
-    <p class="para">I am trying to make a library which would make all my projects look good and consistent.</p>
+    <h1>Ayush's component library.</h1>
+    <p>I am trying to make a library which would make all my projects look good and consistent.</p>
     <hr> 
     <h2>@typography</h2>
 
     <h1>This is the biggest heading</h1>
     <h2>This is the second biggest heading</h2>
     <p>Showing you a normal text</p>
+    <p>This paragraph will have a <strong>bold</strong> text.</p>
     <small>small text</small>
     <hr>
     <!-- accessibility tree -->
     <h2>@container</h2>
     <h3>fluid container</h3>
-    <div>this is a fluid container and it will go till the end of page</div>
+    <div class="container">this is a fluid container and it will go till the end of page</div>
     <h3>@center container</h3>
-    <div>This is a center container and it will go till the specific width</div>
+    <div class = "container container-center">This is a center container and it will go till the specific width</div>
 
     <h2>@Links</h2>
-    <a href="/">Primary Link</a>
-    <a href="/">Secondary Link</a>
+    <a class="link primary-link" href="/">Primary Link</a>
+    <a class="link secondary-link" href="/">Secondary Link</a>
     <!--when you right something and it takes an entire  row in itself then it is called block element -->
     <!--h3,div,p are block element,small is inline element(it does not take an entire row)  -->
     
     <hr>
     <h2>@Lists</h2>
     <h3>unordered Lists</h3>
-    <ul>
+    <ul class="list-non-bullet">
         <li>Item 1</li>
         <li>Item 2</li>
     </ul>
     <h3>unordered inline Lists</h3>
     <!-- CSS will help in doing this. -->
-    <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
+    <ul class="list-non-bullet">
+        <li class="list-item-inline">Item 1</li>
+        <li class="list-item-inline">Item 2</li>
     </ul>
     <h3> reverse ordered lists</h3>
-    <ol>
+    <ol reversed>
         <li>milk</li>
         <li>eggs</li>
         <li>break</li>
     </ol>
     
-    <hr />
+    <hr>
     <h2>@nav</h2>
-    <nav>
-        <div>I am developer</div>
-        <ul>
-            <li>
-                <a href="/">Home</a>
+    <nav class="navigation container">
+        <div class="nav-brand">I am developer</div>
+        <ul class="list-non-bullet nav-pills">
+            <li class="list-item-inline">
+                <a class="link link-active"href="/">Home</a>
             </li>
-            <li>
-                <a href="/">About</a>
+            <li class="list-item-inline">
+                <a class="link"href="/">About</a>
             </li>
         </ul>
     </nav>
 
     <hr>
     <h2>@Header</h2>
-    <header>
-        <img src="images/react.svg"/>
-        <h1>heading inside here</h1>
+    <header class="hero">
+        <img class="hero-img"src="images/react.svg"/>
+        <h1 class="hero-heading">heading <span class="heading-inverted">inside</span> here</h1>
     </header>
+    <!--span is like div but it is inline -->
     <!-- tailwind for theme colors,undraw for images with the selected colors --> 
 
     <hr>
     <h2>@section</h2>
     
-    <section>
-        <h3>white section</h3>
-        <p>This will have white background</p>
+    <section class="section">
+        <div class="container container-center">
+            <h1>white section</h3>
+            <p>This will have white background</p>
+        </div>
+        
     </section>
 
-    <section>
-        <h3>off white section</h3>
-        <p>This will gray background</p>
+    <section class="section ow">
+        <div class="container container-center">
+            <h1>Off white section</h3>
+            <p>This will have grey background</p>
+        </div>
     </section>
 
     <hr>
     <h2>@footer</h2>
-    <footer>
-        <div>Some small heading inside footer</div>
+    <footer class="footer">
+        <div class="footer-header">Some small heading inside footer</div>
         <ul>
-            <li>social one</li>
-            <li>social two</li>
+            <li class="list-item-inline">
+                <a class="link"href="/">social one</a></li>
+            <li class="list-item-inline"><a  class="link"href="/">social two</a></li>
         </ul>
     </footer>
 
