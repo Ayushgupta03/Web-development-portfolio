@@ -32,9 +32,13 @@ hr{
     color: white;
 }
 .secondary-link{
+    
     color: var(--primary-color);
     border-radius: 0.5rem;
-    border: 1px solid var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+.blog-link{
+    text-decoration: none;
 }
 /**look into BEM namin g convention for CSS **/
 
@@ -107,13 +111,25 @@ hr{
     text-align: center;
     color: white;
     border-top-right-radius: 1rem;
+    margin-top: 1rem;
 }
 .footer .footer-header{
     font-weight: bold;
+    font-size: large;
 }
 .footer .link{
     color: white;
 }
 .footer ul{
     list-style: 0px;
+}
+
+/** blogs page **/
+.blog-date{
+    font-size: 0.83255rem;
+    line-height: 1.75rem;
+    display: block;
+    margin-bottom: 1.75rem;
+    margin-top: -1.75rem;
+    
 }
